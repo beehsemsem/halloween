@@ -1,0 +1,1068 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #141215;
+    color: #f0771a;
+    font-family: "Lato", sans-serif;
+    text-transform: capitalize;
+}
+/* start header */
+header{
+    height: 95vh;
+    background-image: url(../images/slider-1.webp);
+    background-size: cover;
+    position: relative;
+    animation: cm alternate infinite step-end 4s;
+}
+@keyframes cm  {
+    50%{
+        background-image: url(../images/slider-2.webp);
+    }
+    
+}
+.header-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    
+}
+.header-title h1{
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+}
+
+.header-title h2 {
+    font-size: 40 px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 20PX 0PX;
+    color: white;
+
+}
+.header-title button{
+    padding: 25px 35px;
+    color: #f3091c;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #000;
+    
+
+}
+.header-title button:hover{
+    background-color: #f0771a;
+    color: #141215;
+
+}
+
+@media (max-width:1300px) {
+    header{
+        height: 80vh;
+    }
+    
+}
+
+@media (max-width:995px) {
+    .header-title h1{
+        font-size: 60px;
+    }
+    .header-title h2{
+        font-size: 30px;
+    }
+    .header-title button{
+        padding:15px 30px;
+    }
+    header{
+        height: 50vh;
+    }
+}
+
+/* end header */
+
+/* start nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+
+}
+nav .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    
+}
+
+nav ul li {
+    list-style: none;
+    padding: 15px 10px;
+    
+}
+nav ul li a {
+    text-decoration: none;
+    color: #f0771a;
+    transition: 0.4s;
+    
+    
+}
+nav ul li a:hover{
+    color: #fff;
+    background-color: #000;
+    padding: 5px 0;
+    transform: translate(10px);
+}
+nav ul li:first-child a:hover{
+    color: white;
+    
+}
+
+nav ul li a i{
+    font-size: 15px;
+
+}
+/* start nav pages */
+nav ul li :nth-child(2){
+    position: relative;
+}
+nav ul li:nth-child(2) .menu-1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    width: 300px;
+    background-color: #141215;
+    padding: 20px;
+    z-index: 5;
+    transition: 0.3s;
+    display: none;
+    top: 80 px ;
+}
+nav ul li:nth-child(2):hover .menu-1{
+    display: flex;
+}
+nav ul li:nth-child(2) .menu-1 a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+nav ul li:nth-child(2) .menu-1 a.part-2{
+    justify-content: flex-start;
+    gap: 10px;
+
+}
+nav ul li:nth-child(2) .menu-1 a.part-2 i{
+    margin-left: -20px;
+    opacity: 0;
+}
+nav ul li:nth-child(2) .menu-1 a.part-2:hover i{
+    margin-left: 0px;
+    opacity: 1;
+}
+@media (max-width:1300px) {
+    nav{
+        padding: 5px 10px;
+    }
+    
+}
+
+
+nav .fa-bars{
+    position: absolute;
+    left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media (max-width:995px) {
+    nav .fa-bars{
+        display: block;
+    }
+    nav ul{
+        padding: 30px 0;
+        position: fixed;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        top: 0;
+        background-color: #000;
+        z-index: 500;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: none;
+        
+    }
+    nav ul li {
+        padding: 0;
+        gap: 0;
+    }
+    nav ul li a{
+        display: block;
+        width: 100%;
+        padding: 10px 40px ;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    nav ul li:nth-child(2) .menu-1, .menu-0, .menu-3{
+        left: 165px;
+        top:30px
+    }
+
+    nav:hover ul{
+        display: block;
+
+    }
+}
+/* end nav pages */
+
+/* start nav home */
+
+nav ul li :nth-child(1){
+    position: relative;
+}
+
+nav ul li:nth-child(1) .menu-0{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px;
+    width: 500px;
+    background-color: #141215;
+    padding: 20px;
+    z-index: 5;
+    transition: 0.3s;
+    display: none;
+    top: 80 px;
+    
+    
+}
+nav ul li:nth-child(1) .menu-0 div{
+    width: calc((100% - 50px ) / 2);
+    
+}
+nav ul li:nth-child(1) .menu-0 div a{
+    padding: 3px;
+}
+nav ul li:nth-child(1):hover .menu-0{
+    display: flex;
+}
+nav ul li:nth-child(1) .menu-0 a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
+
+/* end nav home */
+
+/* start helloween */
+nav ul li :nth-child(3){
+    position: relative;
+}
+
+nav ul li:nth-child(3) .menu-3{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    width: 95%;
+    background-color: #141215;
+    padding: 20px 10px ;
+    z-index: 5;
+    transition: 0.3s;
+    display: none;
+    top: 95 px;  
+    left: 15px;   
+    
+}
+
+
+nav ul li:nth-child(3) .menu-3 .hall img{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+
+}
+nav ul li:nth-child(3) .menu-3 .hall img:hover{
+    transform: scale(1.2);
+}
+nav ul li:nth-child(3) .menu-3 .hall{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+nav ul li:nth-child(3) .menu-3 div{
+    width: calc((100% - 40px ) / 5);
+    
+    
+}
+
+nav ul li:nth-child(3) .menu-3 div a{
+    padding: 10px 5px ;
+    
+}
+nav ul li:nth-child(3):hover .menu-3{
+    display: flex;
+    
+}
+nav ul li:nth-child(3) .menu-3 a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+nav ul li:nth-child(3) .menu-3 a strong{
+    font-size: 20px;
+}
+nav ul li:nth-child(3) .menu-3 .one a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    letter-spacing: 1 px;
+}
+
+
+
+/* end helloween */
+
+/* start slider */
+.slider{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+ @media (max-width:768px){
+    .slider{
+        top: auto;
+        transform: translateX(0);
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    .slider.right{
+        right: 41%;
+    }
+    .slider.left{
+        left: 41%;
+    }
+}
+
+.slider:hover{
+    background-color: #f0771a;
+    color: #000;
+}
+.slider.right{
+    right: 100px;
+}
+.slider.left{
+    left: 100px;
+}
+/* end slider */
+/* end nav  */
+/* end header  */
+
+/* start serve */
+.serve{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+.serve div{
+    width: calc((100% - 60px ) / 4);
+    height: 100%;
+    color: #fff;
+    background-color: #f0771a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.serve div img{
+
+}
+.serve div b{
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+}
+
+@media (max-width:768px){
+    .serve div{
+    width: calc((100% - 60px ) / 3);
+   
+    }
+}
+
+
+/* end serve */
+
+/* start cat */
+.cat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 60vh;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+.cat .cat-1 , 
+.cat .cat-2 {
+    height: 100%;
+    width: calc((100% - 60px) / 4 );
+    background-image: url(../images/banner-helloween-01.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.cat .cat-2{
+    background-image: url(../images/banner-helloween-02.webp);
+}
+.cat .cat-1 p ,
+.cat .cat-2 p{
+    font-weight: 300;
+
+}
+.cat .cat-1 b , 
+.cat .cat-2 b{
+    width: 200px;
+   font-size: 35px;
+   font-weight: 900; 
+   text-align: center;
+   text-transform: uppercase;
+   
+}
+.cat .cat-3{
+    height: 100%;
+    background-image: url(../images/banner-helloween-05.webp);
+    background-size: cover;
+    width: calc((100% - 20px) /2 );
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+}
+.cat .cat-3 b{
+    font-size: 35px;
+    font-weight: 900;
+    color: #fff;
+}
+.cat .cat-3 .container{
+    display: flex;
+    gap: 50px;
+
+}
+.cat .cat-3 .container div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.5;
+    font-size: 17px;
+
+
+}
+.cat .cat-3 .container div a{
+    text-decoration: none;
+    color: #fff;
+}
+.cat .cat-3 .container div a:hover{
+    color: #f0771a;
+}
+.cat .cat-3 .container div a::before{
+    content:"â€¢" ;
+    margin-right: 10px;
+    text-transform: lowercase;
+}
+/* end cat */
+
+/* start products */
+
+.products{
+    margin: 100px 0;
+
+}
+.products h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 35px;
+    color: #fff;
+}
+
+
+.products .container{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.stiky .card{
+    width: calc((100% - 60px ) / 4 );
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+   
+    
+    
+}
+.stiky .card div{
+    width: 100%;
+    overflow: hidden;
+    
+    
+}
+
+.stiky .card div img{
+    width: 100%;
+    transition: 0.5s;
+}
+.stiky .card div img:hover{
+    transform: scale(1.2);
+
+}
+.stiky .card b{
+    display: block;
+    margin: 15px 0;
+    transition: 0.5s;
+    cursor: pointer;
+    color: #fff;
+    
+
+}
+.stiky .card b:hover{
+    color: #f0771a;
+}
+.stiky .card p{
+    color: #fff;
+    font-weight: 600;
+
+}
+.stiky .card p del{
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-right: 15px;
+
+}
+.stiky .card button{
+    margin-top: 10px;
+    padding: 7px 20px;
+    background-color: #f0771a;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100%;
+    transition: 0.4s;
+    border: 2px solid transparent;
+    border-radius: 10%;
+    
+}
+.stiky .card:hover button{
+    bottom: 0;  
+}
+.stiky .card button:hover{
+    border: 2px solid white;
+    background-color: #f0771a;
+    color: #000;
+}
+.stiky .card article{
+    position: absolute;
+    top: 10px;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: .5s;
+}
+.stiky .card article i{
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stiky .card:hover article{
+    right: 20px;
+}
+/* end products */
+
+
+/* start night */
+.night{
+    position: relative;
+    height: 75vh;
+    color: #fff;
+    overflow: hidden;
+}
+.night img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .5s;
+    
+}
+.night img:hover{
+    transform: scale(1.1);
+
+}
+.night div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50% );
+    left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 500px;
+    text-align: center;
+}
+
+.night div b{
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 1.5;
+
+
+}
+.night div p{
+    font-size: 15px;
+    line-height: 1.5;
+
+}
+.btn{
+    padding: 20px 35px;
+    font-size: 16px;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    color: #fff;
+}
+.btn:hover{
+    color: #000;
+    background-color: #fff;
+
+}
+
+/* end night */
+
+
+
+
+/* start arrival */
+
+.arrival{
+    margin: 70px 170px;
+}
+.arrival b{
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 70px;
+    color: #fff;
+    
+}
+
+.arrival .container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+
+}
+.arrival .container .left{
+    width: calc((100% - 20px ) / 2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.arrival .container .right{
+    width: calc((100% - 20px) / 2);
+}
+.arrival .container .left .card{
+    width: calc((100% - 20px ) / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.arrival .container .left .card .process{
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   bottom: -100%;
+   left: 0;
+   transition: .2s;
+}
+
+
+.arrival .container .left .card .process button{
+    position: static;
+    transform: translateX(0);
+    width: 200px;
+    border-radius: 0;
+}
+
+.arrival .container .left .card .process button:hover{
+    border-radius: 0; 
+    
+
+}
+.arrival .container .left .card .process div i{
+    color: gold;
+}
+
+.arrival .container .left .card:hover .process{
+    bottom: 0;
+}
+.arrival .container .left .card b{
+    font-size: 16px;
+    text-align: left;
+}
+.arrival .container .left .card .new{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #0067fd;
+    color: #fff;
+    font-size: 18px;
+    left: 10px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+}
+.arrival .container .left .card:hover .new{
+    opacity: 0;
+}
+.arrival .container .right .card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.arrival .container .right .card b{
+    font-size: 16px;
+}
+
+
+/* end arrival */
+
+
+/* start about */
+.about{
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+.about img{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    left: 0;
+    bottom: -50px;
+    position: absolute;
+}
+.about img:hover{
+    transform: scale(1.1);
+}
+
+.about div{
+    position: absolute;
+    top: 60%;
+    left: 50px;
+    transform: translateY(-50%);
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+
+    
+}
+.about div b{
+    font-size: 35px;
+    font-weight: bold;
+}
+.about div p{
+    line-height: 2;
+    font-size: 14px;
+}
+/* end about */
+
+/* start plus */
+.plus{
+    margin: 100px 0;
+    height: 90vh;
+    position: relative;
+}
+.plus::after{
+    content: "";
+    position: absolute;
+    background-color: #f0771a;
+    width: 0%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    z-index: 500;
+    transition: .5s;
+}
+.plus:hover::after{
+    width: 100%;
+}
+.plus img{
+    width: 100%;
+    height: 100%;
+}
+.add{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cccccc7e;
+    border-radius: 70%;
+    left: 270px;
+    top: 150px;
+}
+.add:hover{
+    background-color: #fff;
+    color: #000;
+    
+}
+.add i:hover{
+    background-color: #fff;
+    color: #000;
+    
+}
+.add i{
+    padding: 5px;
+    background-color: #f3091c;
+    opacity: 0.5;
+    color: #fff;
+    border-radius: 50%;
+
+}
+.two{
+    left: 50px;
+    top: 250px;
+}
+.three{
+    top: 330px;
+    left: 320px;
+}
+.four{
+    left: 780px;
+    top: 110px;
+}
+.five{
+    left: 1030px;
+}
+.sex{
+    left: 850px;
+    top: 300px;
+}
+/* end plus */
+
+
+/* start testo */
+.testo{
+    background-image: url(../images/helloween-bg2.webp);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 100px;
+}
+.testo b{
+    text-align: center;
+    display: block;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: 900;
+}
+.testo .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+
+}
+.testo .container .card{
+    width: calc((100%-20pc) / 2);
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    box-sizing: border-box;
+    border: 2px white;
+    border-style: dotted;
+}
+.testo .container .card h4{
+    font-size: 20px;
+    color: #f0771a;
+
+}
+.testo .container .card p{
+    line-height: 1.5;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+/* end testo */
+
+/* start footer */
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    border-top: #f3091c 2px solid;
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+.footer .part-1{
+    display: flex;
+    width: calc((100% - 40px) / 3);
+    flex-direction: column;
+    gap: 40px;
+    justify-content: flex-start;
+
+}
+
+.footer .part-2{
+    display: flex;
+    width: calc((100% - 40px) / 3);
+    flex-direction: column;
+    gap: 40px;
+    justify-content: flex-start;
+
+}
+.footer .part-3{
+    display: flex;
+    width: calc((100% - 40px) / 3);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 70px;
+    align-items: flex-start;
+    
+    
+    
+
+}
+.footer ul{
+    list-style: none;
+}
+.footer li a{
+    text-decoration: none;
+    color: #5b5a5a;
+}
+.footer li a:hover{
+    color: #f0771a;
+
+}
+.footer span{
+    color: #fff;
+}
+.footer h4{
+    color: #fff;
+    top: 20px;
+}
+.footer .part-1 p{
+    display: block;
+    width: 100%;
+    color: #5b5a5a;
+}
+.part-3 ul li{
+    color: #5b5a5a;
+}
+
+/* end footer */
